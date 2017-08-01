@@ -7,8 +7,9 @@ jobs:
     - stage: unit tests
       script: echo two
     - stage: conditional deploy
-      script: echo "Deploying!"
       after_script: echo "Deployed!"
       deploy:
+        provider: script
+        script: scripts/deploy.sh
         on:
           condition: $TRAVIS_BRANCH =~ master|production
