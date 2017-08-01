@@ -11,5 +11,4 @@ jobs:
       deploy:
         provider: script
         script: scripts/deploy.sh
-        on:
-          condition: $TRAVIS_BRANCH =~ master|production
+        on: master
