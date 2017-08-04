@@ -8,4 +8,4 @@ jobs:
       script: echo two  
     - stage: runs on foobar branch
       script: echo 'only runs on foobar branch'
-      on: 'foobar'
+      branch: 'foobar'
